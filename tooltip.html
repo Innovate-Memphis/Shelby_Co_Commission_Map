@@ -1,0 +1,1490 @@
+<html class="{{_theme}}">
+
+<head>
+    <link rel="preload" href="https://felt.com/fonts/AtlasGrotesk-Regular-Cy-Web.woff2" as="font" type="font/woff2"
+        crossorigin>
+    <link rel="stylesheet" type="text/css" href="https://felt.com/fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="https://felt.com/css/root.css">
+    <link rel="stylesheet" type="text/css" href="https://felt.com/css/html-popup.css">
+    <style>
+        .tooltip-img-container {
+            position: relative;
+            width: 300px;
+        }
+
+        .candidate-img-container {
+            position: relative;
+            width: 280px;
+        }
+
+        .tooltip-img {
+            width: 100%;
+            height: 100%;
+            object-fit: scale-down;
+        }
+
+        .candidate-img {
+            width: 100%;
+            height: 100%;
+            object-fit: scale-down;
+        }
+
+        .img-placeholder {
+            height: 100%;
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+
+        .tooltip-data {
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 20px;
+        }
+
+        .img-overlay {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            backdrop-filter: blur(10px);
+            background-color: rgba(83, 80, 80, 0.5);
+            display: flex;
+            flex-direction: column;
+            font-weight: 900;
+            color: white;
+        }
+
+        .add-1,
+        .add-2 {
+            padding-left: 15px;
+        }
+
+        table {
+            width: 100%;
+            font-size: 10px;
+        }
+
+        table tr td {
+            padding: 5px;
+        }
+
+        .bg-gray {
+            background: #f2f2f2;
+        }
+
+        h3 {
+            border-bottom: solid #048188;
+            margin-bottom: 0;
+        }
+
+        .last-updated {
+            font-size: 10px;
+            margin-bottom: 10px;
+        }
+
+        .disclaimer {
+            font-size: 10px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tooltip-img-container">
+        {% if current_commissioner_photo_url and current_commissioner_photo_url != "N/A" %}
+        <img class="tooltip-img" src="{{current_commissioner_photo_url | escape}}"
+            alt="{{ current_commissioner | escape }}">
+        {% else %}
+        <div class="img-placeholder">No image available</div>
+        {% endif %}
+        <div class="img-overlay">
+            <div class="add-1">
+                {{label | escape}}
+            </div>
+            <div class="add-2">
+                Current: {{current_commissioner | escape}}
+            </div>
+        </div>
+    </div>
+    <div class="tooltip-data">
+        <div class="last-updated">Last updated: March 21, 2026</div>
+        <span class="disclaimer">Candidates' names pulled from <a target="_blank"
+                href="https://www.commercialappeal.com/story/news/politics/2026/02/27/here-is-who-qualified-for-the-may-shelby-county-primary-election/88534021007/">Commercial
+                Appeal</a></span>
+        <div class="disclaimer">Please email kelsey@innovatememphis.com for updates.</div>
+        <h3>2026 Candidates</h3>
+        {% if district == 1 %}
+        <section>
+            <span class="disclaimer">2 candidates listed in alphabetical order by last name</span>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/597545004_122101860345154702_966995600607944001_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=107&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=frzPPtpFUTUQ7kNvwH-I0Fx&_nc_oc=Adp0G1H4ikRpoWBfC90PayJc7ZUH7Et_zAVZsVwZZzyUCX7-RvmksRO-E8MtDAYvFFPWTLlDF5kSsVNUSXFsprBn&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=MkCM_Z-8i2eHVn5tgEjJtQ&_nc_ss=7a30f&oh=00_Afx0XCQLS-PXPQ_czDWy14RROyuRTqnmZf3CWXNAKzCpLQ&oe=69C3C9BD">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Sade Nicole Bradley
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Sade Nicole Bradley</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><a href="mailto:votesade1@gmail.com">votesade1@gmail.com</a></td>
+                    </tr>
+
+                    <tr class="bg-gray">
+                        <td>Website</td>
+                        <td><a href="https://votesadebradley.com/" target="_blank">votesadebradley.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Social Media</td>
+                        <td><a href="https://www.facebook.com/people/Sade-Bradley/61584641063860/"
+                                target="_blank">Facebook</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/594066471_122109880191114847_1143451221795000255_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=fGS8imS9cDcQ7kNvwF2E533&_nc_oc=AdqkBGnhQkGTUt6SNsp7aGSLoRsRmrpkv7bcCHRw812jBQigaE_vnLrZ0Tx34pC4B6NN8cc8-ehuLeLg3VjS4Zko&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=ID79B1splsgYOR4xW8Wr5A&_nc_ss=7a30f&oh=00_AfwjwlTps2AnUO2szz5SxxHJMBt4kBkIT1Qt5aFRGdJgig&oe=69C3D421">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Rhonda O'Dell
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Rhonda O'Dell</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Republican</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><a href="mailto:Electrhondaodell@gmail.com">Electrhondaodell@gmail.com</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Phone</td>
+                        <td>901-444-1633</td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><a href="https://www.electrhondaodell.com/" target="_blank">electrhondaodell.com</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Social Media</td>
+                        <td><a href="https://www.facebook.com/people/Elect-Rhonda-ODell/61583445427473/"
+                                target="_blank">Facebook</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        {% elsif district == 2 %}
+        <section>
+            <span class="disclaimer">1 candidate running uncontested</span>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/491289205_122096306972856849_8256582442851685836_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=iJXU2of4678Q7kNvwHtCWWy&_nc_oc=AdrSeVY0QEVSs9UUS7v2Fq_r3DJvmc29Ec11Kmn7R9LxoiH6WrAVB_kuDulA3Og8QlWzulKPaQYR1yJFPZbXbRUK&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=mo3HSi-Bzjw1BiFKfWM9VQ&_nc_ss=7a30f&oh=00_AfwQWMUCVnzOUpxO9nLwQd4jpk9UPP5rQmZNlDDpXFKlbA&oe=69C3C918">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Derek Mills
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Derek Mills</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Republican</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><a href="mailto:MillsForDistrict2@gmail.com">MillsForDistrict2@gmail.com</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/p/Derek-Mills-for-Shelby-County-Commissioner-District-2-61575705476162/"
+                                target="_blank">Facebook</a>
+                            <a href="https://www.instagram.com/millsfordistrict2/" target="_blank">Instagram</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        {% elsif district == 3 %}
+        <section>
+            <span class="disclaimer">2 candidates listed in alphabetical order by last name</span>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/607048996_122115744327087311_3651460697608869064_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=z95nRv8Fa0wQ7kNvwE75VjX&_nc_oc=AdoILNY-Ld73VVEl7gyyqDeIWSC08I2BgVIzswXrqLHrQY_7ppWuG1V2wumB35ungEFa2vwmhqK4b0lRt5fKMJQa&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=3qSveo5lI6-I7aA8WzpVzw&_nc_ss=7a30f&oh=00_AfzzK1eC56F-bno3QuAA0eDvZS3cpWlUe_gYotxQHMs7cQ&oe=69C3EA8A">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Michele Dial
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Michele Dial</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Republican</td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><a href="https://www.dial4shelby3.com" target="_blank">dial4shelby3.com</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Email</td>
+                        <td><a href="mailto:dial4shelby3@mail.com">dial4shelby3@mail.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td>(901) 487-8130</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/people/Michele-Dial-Candidate-for-Shelby-County-Commission-Position-3/61582619340587/"
+                                target="_blank">Facebook</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://ryanramkhelawan.com/_assets/media/47905e1aa17fbe9e53a2273c563f5f41.jpg">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Ryan Ramkhelawan
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through campaign website</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Ryan Ramkhelawan</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><a href="https://ryanramkhelawan.com/" target="_blank">ryanramkhelawan.com</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        {% elsif district == 4 %}
+        <section>
+            <span class="disclaimer">1 candidate running uncontested</span>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/446849910_867026751905896_6885435071351339297_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=-DaF-MrEyaIQ7kNvwHgoSSS&_nc_oc=AdoFMw7mCxvnn5QzRBuiAQnysl917C33E0ndZNfasxCkroHsu0nwnRAgcSICaRc74P7b7EIUe2wUgKQ48u8ttHxA&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=TvPEHuEyd6LTP6Pdv9RLPA&_nc_ss=7a30f&oh=00_AfyHgU5nQVBHIaM_bxcqoMYJBoK0mrVXWcrfMRgJl6vDHw&oe=69C3E2DB">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Mark Billingsley
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Mark Billingsley</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Republican</td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><a href="https://billingsleyforshelby.com/" target="_blank">billingsleyforshelby.com</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Ballotpedia</td>
+                        <td><a href="https://ballotpedia.org/Mark_Billingsley" target="_blank">View here</a></td>
+                    </tr>
+                    <tr>
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/p/Mark-Billingsley-for-Shelby-County-Commission-Position-4-100057957376832/"
+                                target="_blank">Facebook</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        {% elsif district == 5 %}
+        <section>
+            <span class="disclaimer">2 candidates listed in alphabetical order by last name</span>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/274727278_115040697783360_4256454086444075812_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=7pg-ARdLzP4Q7kNvwFYi26D&_nc_oc=Adr-0NaItnAzFqYIbxcMroTLojgzDvHdqKor4Gch3AOXujhAPCubWOCrA9O6bDoVCKqn2bB7CxjMkSEmTPl8nttD&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=Qncm-h7-52H_uASNLIOYOQ&_nc_ss=7a30f&oh=00_Afzv4eqbMp-mc21Xkd0dTSYeDQ-ZEtXMokRx-ayGC94LZA&oe=69C3E9EA">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Shante Avant
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Shante Avant, incumbent</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><a href="https://www.voteavant.com/" target="_blank">voteavant.com</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Email</td>
+                        <td><a href="mailto:voteavant5@gmail.com">voteavant5@gmail.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td>(901) 219-7204</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Ballotpedia</td>
+                        <td><a href="https://ballotpedia.org/Shante_Avant" target="_blank">View here</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/avant5countycommission/" target="_blank">Facebook</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://static.wixstatic.com/media/187ef7_a8100fd0fb4f45598c39200adbe54e09~mv2.jpeg/v1/fill/w_1048,h_1572,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_9206.jpeg">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Milton Bonds Jr.
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through campaign website</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Milton Bonds Jr.</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><a href="https://www.electmiltonbonds2026.com/">electmiltonbonds2026.com</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Email</td>
+                        <td><a
+                                href="mailto:FRIENDSTOELECTMILTONBONDSSCC@GMAIL.COM">FRIENDSTOELECTMILTONBONDSSCC@GMAIL.COM</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td>901-338-3961</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        {% elsif district == 6 %}
+        <section>
+            <span class="disclaimer">1 candidate running uncontested</span>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/277558576_131968306070156_8803132127949223132_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=KUc9IU_xYqcQ7kNvwFFhYQx&_nc_oc=AdpQhc7xo9xgVQxcGH1WM1wKojsfUiJXYAbKTtLHoZLqUio9aCfGYnWcyTB96foNCgH5QS83dy_3HeDb_Pn-M9db&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=Wy5dBhYUrXf-HIFb1u3VYA&_nc_ss=7a30f&oh=00_AfxLtOLkrnFtWyUQFMEmRyatKzofJYpOyhInMLn5E4pekA&oe=69C3E42F">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Charlie Caswell
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Charlie Caswell, incumbent</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><a href="https://charliecaswelljr.com/" target="_blank">charliecaswelljr.com</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Email</td>
+                        <td><a href="mailto:electcharliecaswelljr@gmail.com">electcharliecaswelljr@gmail.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td>(901) 325-1732</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Ballotpedia</td>
+                        <td><a href="https://ballotpedia.org/Charlie_Caswell_Jr." target="_blank">View here</a></td>
+                    </tr>
+                    <tr>
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/charliecaswelljr/" target="_blank">Facebook</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        {% elsif district == 7 %}
+        <section>
+            <span class="disclaimer">7 candidates listed in alphabetical order by last name</span>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://www.shelbycountytn.gov/ImageRepository/Document?documentID=40503">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Henri Brooks
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Shelby County website</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Henri Brooks, incumbent</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Ballotpedia</td>
+                        <td><a href="https://ballotpedia.org/Henri_Brooks" target="_blank">View here</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/416116803_2296891583847110_4798323055441755299_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=100&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=bUuudcUbD3kQ7kNvwHDrbSa&_nc_oc=AdptC-jhR6EdKk2t0Op5nbsGc8xrr9U5-tytJlCjpZxqoThBmwjq7AhVIYTurp30ch12Cocopd03Gd7ikL5l3SsC&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=1bm2NXvBfNKlpK6bDNunuA&_nc_ss=7a30f&oh=00_AfzULsQje2KlRTucS0fEyuEtiYsLProtpfklY8l7lmL7aA&oe=69C4C289">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Gerald Green
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Gerald Green</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Republican</td>
+                    </tr>
+                    <tr>
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/gerald.green.14289/" target="_blank">Facebook</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/645057889_10163784015670073_8956272643608741210_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=AOsq1DmfmEAQ7kNvwGPJXJf&_nc_oc=Adr9jJ2cogj-Hq_jHpQeLAI8dNdwcRQVkDMi1XNfxBTavKzTxH8rBplitzVNK4li-oU4q0hNrEwGTpFOoUBAkGm5&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=_S9onPvSmkb2huRivbWjng&_nc_ss=7a30f&oh=00_AfwLyvaesMIGFG4WQjE8LsZwGMctOl2o_aLdf12yOIeA9A&oe=69C4D866">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Josh Mohundro
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Josh Mohundro</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><a href="mailto:joshmohundro@clearviewinsurance.com">joshmohundro@clearviewinsurance.com</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Phone</td>
+                        <td>(901) 582-2020</td>
+                    </tr>
+                    <tr>
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/people/Josh-Mohundro-for-District-7/61585060943714/"
+                                target="_blank">Facebook</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="candidate-img-container">
+                <img class="candidate-img" src="https://moore4district7.com/images/hero-large.png">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Ester B. Moore
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through website</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Ester B. Moore</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><a href="https://moore4district7.com/" target="_blank">moore4district7.com</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/577027138_122108008299059223_1158623595201996312_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=w7QRtqKKqkMQ7kNvwGUPz0k&_nc_oc=AdooGn-Ui4pH5ceuXCfPVchCirBjUzqri4Q7Bk3bzejFcZgGwKbohZf3O6zpicCB1ruReg_6WunLeWto_EGP16OK&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=Rl38pfMqhpdHgcsM3fVVQA&_nc_ss=7a30f&oh=00_AfxkeOS6XkR2vYm7TccZJacQ9goom8j5HB_D7jVa-TV6fw&oe=69C4EE1D">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Kevin Morales
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Kevin Morales</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><a href="https://votekevinmorales.org/" target="_blank">votekevinmorales.org</a></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><a href="mailto:kevmor2001@gmail.com">kevmor2001@gmail.com</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/people/Kevin-Morales/61581776712481/"
+                                target="_blank">Facebook</a>
+                            <a href="https://www.instagram.com/moralesforchange/" target="_blank">Instagram</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/653039648_122104803026074903_1680091073025914839_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=tk1Z860tCv4Q7kNvwHBPMJD&_nc_oc=AdpUFLX23yTE6WGmFlQAHLHT1wqjeeEjNW40frsGUwiJzMhwdIr0zmQS70UYlKdJUpINMuo98au822pkTSeY6TN-&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=6IYTQlBQi3NIyXT0yDI4CQ&_nc_ss=7a30f&oh=00_Afx67XLSh4gi8We5IR3TtJkKIk0Kg1ZNWPjhatMYRmpH6Q&oe=69C4EFB2">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Jamie Naylor
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Jamie Naylor</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><a href="https://votejamienaylor.com/" target="_blank">votejamienaylor.com</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Email</td>
+                        <td><a href="mailto:jamienaylor901@gmail.com">jamienaylor901@gmail.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td>(901) 652-4064</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/people/Vote-Jamie-Naylor/61552247110961/"
+                                target="_blank">Facebook</a>
+                            <a href="https://www.instagram.com/votejamie901" target="_blank">Instagram</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/599938010_122093984463172064_7714662820435127529_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=1BVtRpVwKxMQ7kNvwGwkqhP&_nc_oc=Adpb84RJFOUIn632c23AuTXzx5ZDcfNMnoWBjdiXwIcTezzr0iiq5SUN4cmPOXUY8jOsrkBEg1U4-nskHBytt3bj&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=gqjDmHN5i3PSJ3PZOyrfgQ&_nc_ss=7a30f&oh=00_AfzUO1HMXuAucDnT3qujqgrHqxXg3i6mfG4suHnZErf_rw&oe=69C4F8E8">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Dedriene Rogers
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Dedriene Rogers</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><a href="https://electdedrienerogers.org/" target="_blank">electdedrienerogers.org</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Email</td>
+                        <td><a href="mailto:dr.rogers@electdedrienerogers.org">dr.rogers@electdedrienerogers.org</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td>901-677-2277</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/people/Dedriene-Rogers/61585161922150/"
+                                target="_blank">Facebook</a>
+                            <a href="https://x.com/DrDRogers" target="_blank">Twitter</a>
+                            <a href="https://www.instagram.com/dr.dedrienerogers" target="_blank">Instagram</a>
+                            <a href="https://www.tiktok.com/@dr.dedrienerogers" target="_blank">Tik Tok</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        {% elsif district == 8 %}
+        <section>
+            <span class="disclaimer">3 candidates listed in alphabetical order by last name</span>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/565745893_122099463459077965_5624509012838702076_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=101&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=HJdz5xKjj7QQ7kNvwG_HZWV&_nc_oc=AdpNcamCpRT1mu6WDtIhm45CTCcLHFEb0tBWEvvgSV8XXQU0ACyhBZx1bCHssF53A5uXDqUz80KvA6I5qzno_dCF&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=nd06L6stCq6W8chX2o0fOg&_nc_ss=7a30f&oh=00_AfyiiCwoQtBqVlPbXOEjSyfxRd20m9Zdy3f91-7TeuNfaw&oe=69C4C974">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        E. J. Murphy
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>E. J. Murphy</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Republican</td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><a href="https://www.edmonique.com/our-campaign" target="_blank">www.edmonique.com/our-campaign</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Email</td>
+                        <td><a href="mailto:contact@edmonique.com">contact@edmonique.com</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/people/Edmonique-Murphy/61582338969860/"
+                                target="_blank">Facebook</a>
+                            <a href="https://www.instagram.com/elect.murphy/" target="_blank">Instagram</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/647207306_1544455864346737_3306721377367347867_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=hq3VBweVE6IQ7kNvwFXHorJ&_nc_oc=AdquSuCQNSupEBqiWgEfusFY6UKQb2GvcoRr9XyFSVwAAUSPmwZpdbEk3YiHkG6p65KibBh1VfZ70yU1rdS-v_zm&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=jcyyHH0vuJ1F65RYkLBzHw&_nc_ss=7a30f&oh=00_Afw3Xhsn9THTJLyrrCmZtYNQeNp3rSmcTZu1Wr6ofV4y3g&oe=69C4CEA5">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Jerred Price
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Jerred Price</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><a href="https://www.jerredprice.com/" target="_blank">jerredprice.com</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Email</td>
+                        <td><a href="mailto:jerred@jerredprice.com">jerred@jerredprice.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Ballotpedia</td>
+                        <td><a href="https://ballotpedia.org/Jerred_Price" target="_blank">View here</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/jerredformemphis/" target="_blank">Facebook</a>
+                            <a href="https://www.instagram.com/jerredformemphis" target="_blank">Instagram</a>
+                            <a href="https://www.youtube.com/@jerredprice" target="_blank">YouTube</a>
+                            <a href="https://www.threads.com/@jerredformemphis" target="_blank">Threads</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="candidate-img-container">
+                <img class="candidate-img" src="https://thewilltolead.com/wp-content/uploads/2025/07/will_the_man.png">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Will Richardson
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through website</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Will Richardson</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><a href="https://thewilltolead.com/" target="_blank">thewilltolead.com</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Ballotpedia</td>
+                        <td><a href="https://ballotpedia.org/Will_Richardson" target="_blank">View here</a></td>
+                    </tr>
+                    <tr>
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/globalunderdog/" target="_blank">Facebook</a>
+                            <a href="https://www.instagram.com/iamwillrichardson/" target="_blank">Instagram</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        {% elsif district == 9 %}
+        <section>
+            <span class="disclaimer">6 candidates listed in alphabetical order by last name</span>
+            <div class="candidate-img-container">
+                <img class="candidate-img" src="https://electrodblount.com/backend/uploads/self.png">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Rod Blount
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through website</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Rod Blount</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Ballotpedia</td>
+                        <td><a href="https://ballotpedia.org/Rod_Blount" target="_blank">View here</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Website</td>
+                        <td><a href="https://electrodblount.com/about_us.php" target="_blank">electrodblount.com/about_us.php</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://s3.amazonaws.com/ballotpedia-api4/files/thumbs/200/300/RickyDixon.jpg">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Ricky Dixon
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Ballotpedia</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Ricky Dixon
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Ballotpedia</td>
+                        <td><a href="https://ballotpedia.org/Ricky_Dixon" target="_blank">View here</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/626451180_122111912757193240_7883398670870393917_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=6wkSKKqFoTYQ7kNvwEZexTH&_nc_oc=AdpngfLZ5OhazPdj_9G2Y5B98FdKvzDPx1uMLFTGRgyVPqZac8oHmst7A6lTef9ZO0iUbcuVxQ-_zrb4WDNoDFej&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=aQzASIKosi-pfLY4hkfWlw&_nc_ss=7a30f&oh=00_AfwrE7fiV3s1HE8OCUdPBXjsNairX2NnmhHISqgAP1pk7Q&oe=69C5DC61">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Sam D. Echols, IV
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Sam D. Echols, IV
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Ballotpedia</td>
+                        <td><a href="https://ballotpedia.org/Sam_Echols" target="_blank">View here</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Website</td>
+                        <td><a target="_blank" href="https://samecholsd9.com/">samecholsd9.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><a href="mailto:SamecholsD9@gmail.com">SamecholsD9@gmail.com</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Phone</td>
+                        <td>(901) 446-4246</td>
+                    </tr>
+                    <tr>
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/people/Elect-Sam-Echols-IV-County-Commissioner-District-9/61585797217848/"
+                                target="_blank">Facebook</a>
+                            <a href="https://www.instagram.com/samechols/" target="_blank">Instagram</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/272669225_274201391480602_829131493843555764_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=iYi6Y7IZzxcQ7kNvwHF2VLy&_nc_oc=Adpz3kH5MRINo_rBr4CQt1ae-ZN5K5pPxgnxgX-bnk_qNhQqUKP88VkXyUN-FHIHnGYnQ0bqN-TXyvArLlO0XEJk&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=DCIZKQq8cZn7gVGiSTiyIw&_nc_ss=7a30f&oh=00_AfxcfkqN-agxRuo6o2jdApEK3Po_Er1u-pLGto9XiejxLw&oe=69C5D64D">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Jonathan Lewis
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Jonathan Lewis
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Ballotpedia</td>
+                        <td><a href="https://ballotpedia.org/Jonathan_Lewis_(Tennessee)" target="_blank">View here</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Website</td>
+                        <td><a href="https://www.electjonathanlewis.com/" target="_blank">electjonathanlewis.com/</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><a href="mailto:electjonathanlewis@gmail.com">electjonathanlewis@gmail.com</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/ElectJonathanLewis/" target="_blank">Facebook</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/631555422_122101293885250741_5337764078534346523_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=WmdWN-RSG04Q7kNvwFF7-GZ&_nc_oc=AdqfKmaRcIAt9UwrP1bBOrUThi2oBWqoT3wLCbS6S_BN3cVKxViplnHGTgTIO0S8OUBnPr78CFyOBL0bzhkQBefx&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=D5wX8OIX1wtS-7j-ep5QBQ&_nc_ss=7a30f&oh=00_AfxCofujYi73jM5WGlCpWRETAzoLataBHELs13ZqSvUaew&oe=69C5EAB2">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Kharl-Ray Massey
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Kharl-Ray Massey
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/people/Kharl-Ray-Massey/pfbid0zmkuX7MstLr5CLMt1mCb4hFtskfFnVLrqCp4VXPwxhysBCFw2fQTbPK4qSRjRjo2l/"
+                                target="_blank">Facebook</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/549430379_3995356780794633_7749682124952784425_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=Oog1NZQZgEoQ7kNvwE5NyIR&_nc_oc=AdpzTuaWBvP4JyefhkkxoC54lP8D9qQQWiUO0QjkBwm5y3onVHyt9hUehgGXqa_feoMjaC-P8qBJWtlBj34Q2Ioo&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=wHAvyMQ0Cq0wHiRmHikW-Q&_nc_ss=7a30f&oh=00_AfwOUFY042ElComT9lTbZ3sphVw3zSIhPPVlsXjQOpiDDg&oe=69C5D42E">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Karen Streeter
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Karen Streeter</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><a href="mailto:kstreeter5@aol.com">kstreeter5@aol.com</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/kay.streeter.75/" target="_blank">Facebook</a>
+                            <a href="https://www.tiktok.com/@drkay5ks" target="_blank">Tik Tok</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+        {% elsif district == 10 %}
+        <section>
+            <span class="disclaimer">5 candidates listed in alphabetical order by last name</span>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://static.wixstatic.com/media/3889c4_d1390bf1a5ac49f29c6aa60565f5abda~mv2.png/v1/fill/w_764,h_1268,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/WHO.png">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        John Luke Bradley
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through website</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>John Luke Bradley</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><a href="https://www.votejohnbradley.com/" target="_blank">votejohnbradley.com</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.instagram.com/john.luke.bradley" target="_blank">Instagram</a>
+                            <a href="https://www.threads.com/@john.luke.bradley" target="_blank">Threads</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h4>Rebecca Jane Edwards - No Photo Available</h4>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Rebecca Jane Edwards
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Ballotpedia</td>
+                        <td><a href="https://ballotpedia.org/Rebecca_Edwards_(Tennessee)" target="_blank">View here</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/504963536_10166768292619848_3915973679509020788_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=K9lLtlPcwy4Q7kNvwHCmqT1&_nc_oc=AdoDfxDPPzCbauLP2VICq0J4iD2qwcq7r85EiyoVo3K1WJdTGwV6GwN25yn9VKddtylPwPH2Bj-CvYz4LOJvcrC0&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=bESVfb7XJaGUkcW7XIpsdg&_nc_ss=7a30f&oh=00_AfwlC24gjdRv8nuA20gnGBQ8SAO2V6fyJ_ZVxrjrBKtRRg&oe=69C5F342">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Samuel Nelson
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Samuel Nelson
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><a target="_blank" href="https://www.nelson4district10.com/" target="_blank">nelson4district10.com</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Email</td>
+                        <td><a href="mailto:Nelson4district10@gmail.com">Nelson4district10@gmail.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/samuel.b.nelson/" target="_blank">Facebook</a>
+                            <a href="https://www.instagram.com/samuelbnelson/" target="_blank">Instagram</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/646556736_122187745136763311_1405472197272009808_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=OaADHB9AamgQ7kNvwHYv3Ld&_nc_oc=Adp7uQHy1bT1KAoOgGkIzoy3weK3EIzulfZhY5F4Mx8C6KVhWdy_Rhw6huZqDyZLzv_1c2MnDdJMU8wRKf3d1LKq&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=XR60c6Ieg1KCx5KhxBbKxw&_nc_ss=7a30f&oh=00_AfytcsNf14bGQHWAOe8bjgITRJgfB-za_go8o9TuNNUXZw&oe=69C5EC78">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Lashanta Rudd
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Lashanta Rudd
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Ballotpedia</td>
+                        <td><a href="https://ballotpedia.org/Lashanta_Rudd" target="_blank">View here</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Email</td>
+                        <td><a href="mailto:votelashantarudd10@gmail.com">votelashantarudd10@gmail.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/lashanta.rudd.2025/" target="_blank">Facebook</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://images.squarespace-cdn.com/content/v1/6882a6da9371f70534d1ac19/d7c1f2a0-0dc4-43cb-9861-b89775072510/FrontofHanley.jpg">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Brandon "DD" Washington
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through website</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Brandon "DD" Washington</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><a target="_blank" href="https://www.brandon4commission.com/">brandon4commission.com</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Email</td>
+                        <td><a href="mailto:info@brandon4commission.com">info@brandon4commission.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td>(901) 610-2115</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/people/Brandon-Washington-for-District-10/61580069516492/"
+                                target="_blank">Facebook</a>
+                            <a href="https://www.instagram.com/brandon4commission/" target="_blank">Instagram</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        {% elsif district == 11 %}
+        <section>
+            <span class="disclaimer">The incumbent is running uncontested</span>
+        </section>
+        {% elsif district == 12 %}
+        <section>
+            <span class="disclaimer">3 candidates listed in alphabetical order by last name</span>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://content.campaignpartner.net/images/150200/copy_7607B7D1-6B22-43C1-A0EC-CBD46F0616DD.png">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Andrea Bell
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through website</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Andrea Bell</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Independent</td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><a href="https://www.voteandreabell.com/" target="_blank">voteandreabell.com</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/527999808_24482074738089762_4183284401045103917_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=IhcmBjdO1IUQ7kNvwHmuUhu&_nc_oc=Adq2g4Wdl6AMhzv8XYl-PgaLAI186p21pEnXFiZwQ74QH2CAcxNaPZCmvLrCRzI2ge9RbZ9ruk516au5rQ7Apdp9&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=3_KUNW8yCOEsaziJD57O7g&_nc_ss=7a30f&oh=00_AfyV_NxCacAiDtvZgxX07nJSDO02gjcBgHGBxED1dSXhow&oe=69C4EF2A">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Jevonte Porter
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Jevonte Porter</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><a href="https://porterforthepeople.com/" target="_blank">porterforthepeople.com</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Email</td>
+                        <td><a href="mailto:Team@porterforthepeople.com">Team@porterforthepeople.com</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/PorterforthePeople" target="_blank">Facebook</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-2.xx.fbcdn.net/v/t39.30808-6/644554804_122296887752155117_5475964823504199768_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=48KURxpxSn8Q7kNvwEbvB6t&_nc_oc=Ado8IzFpnIxyRsa8z2ejoZ7lD6DbRk6IMSFyQ0Fu9pgTfBmloQ6nhrH_EpbzE5hybMG3URmxjSQ9lexxufgjmHMs&_nc_zt=23&_nc_ht=scontent-atl3-2.xx&_nc_gid=AEk5wKsStRHE6j_KAUcP1w&_nc_ss=7a30f&oh=00_Afy_RruNW6HqlszALm8XudvoVFnqSJUkAA9EXbThguQcuA&oe=69C5048B">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Erika Sugarmon
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Erika Sugarmon, incumbent</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Ballotpedia</td>
+                        <td><a href="https://ballotpedia.org/Erika_Sugarmon" target="_blank">View here</a></td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><a href="https://erikasugarmon.net/" target="_blank">erikasugarmon.net</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Phone</td>
+                        <td>(901) 222-1000</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Email</td>
+                        <td><a href="mailto:Erika.sugarmon@shelbycountytn.gov">Erika.sugarmon@shelbycountytn.gov</a>
+                        </td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/commissionererikasugarmon/" target="_blank">Facebook</a>
+                            <a href="https://www.instagram.com/erikasugarmon/" target="_blank">Instagram</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        {% elsif district == 13 %}
+        <section>
+            <span class="disclaimer">4 candidates listed in alphabetical order by last name</span>
+            <h4>Ed Apple - No Photo Available</h4>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Ed Apple</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Republican</td>
+                    </tr>
+                    <tr>
+                        <td>Ballotpedia</td>
+                        <td><a href="https://ballotpedia.org/Ed_Apple" target="_blank">View here</a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/572225566_672901805893672_8711704926237148974_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=ZdxEQZdUx28Q7kNvwElTPSU&_nc_oc=AdqXoxytzUAHBe24zp9AMt1xx-Ye3UYX1C1sCom3LO5imENQyqVlegaJnqEHBAPPzFT-URbLR8CMs-VskRGxHfCX&_nc_zt=23&_nc_ht=scontent-atl3-1.xx&_nc_gid=uk3HsYhjYvMuN19N0_PNnQ&_nc_ss=7a30f&oh=00_AfxuWv2FoSBJsCtm_I4GMn0E_E1qM90iRT3z5Z9RNgSFaw&oe=69C4F1A0">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Lena Chipman
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Lena Chipman</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Ballotpedia</td>
+                        <td><a href="https://ballotpedia.org/Lena_Chipman" target="_blank">View here</a></td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><a href="https://lenachipman.com/" target="_blank">lenachipman.com</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Email</td>
+                        <td><a href="mailto:leadoutloud2026@gmail.com">leadoutloud2026@gmail.com</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/lenaleadsoutloud" target="_blank">Facebook</a>
+                            <a href="https://www.instagram.com/lenaleadsoutloud" target="_blank">Instagram</a>
+                            <a href="https://bsky.app/profile/LenaLeadsOutLoud.bsky.social" target="_blank">Bluesky</a>
+                            <a href="https://www.tiktok.com/@lenaleadsoutloud" target="_blank">Bluesky</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/624744904_1531923305330238_196876884048269397_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=wzBGFg6ad6YQ7kNvwFWaa0n&_nc_oc=AdpYcEfSg5vNQvBqVKxU2XHQBPJYG_ywoTVpvf2dntv693KsO2b4uxYvLO_Gqx9fVF3VcZXtHBMEXx5jwf9LoGju&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=RjIqKGdQMnW0PzMV7mjsVQ&_nc_ss=7a30f&oh=00_Afx6eTG0HSKDtC3vtnqLrSw2tAlnJjwstn-NGSF0gK-Shw&oe=69C4EA85">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        Amber Huett-Garcia
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>Amber Huett-Garcia</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Ballotpedia</td>
+                        <td><a href="https://ballotpedia.org/Amber_Huett-Garcia" target="_blank">View here</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Website</td>
+                        <td><a href="https://www.amberhuettgarcia.com/" target="_blank">amberhuettgarcia.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Phone</td>
+                        <td>901-646-0564</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/amberhuettgarcia" target="_blank">Facebook</a>
+                            <a href="https://www.instagram.com/obesitycareadvocate/" target="_blank">Instagram</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="candidate-img-container">
+                <img class="candidate-img"
+                    src="https://scontent-atl3-3.xx.fbcdn.net/v/t39.30808-6/522800995_122104991624945807_3208995292638337381_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=2a1932&_nc_ohc=FYxaxBrmvLoQ7kNvwGv1gXP&_nc_oc=AdqdPf2sJPBrc7lHEuEteSSwtbavVOkfmEgjmRPyPXshoqsLsmw2qu6NznvOe3cjMsg27bq3C67E7KQ8ycPztQnq&_nc_zt=23&_nc_ht=scontent-atl3-3.xx&_nc_gid=V6rQJDX48e7afgH6q0ddmA&_nc_ss=7a30f&oh=00_AfwjabEdVJfnPYk6hvLR5cHK2WR8QTyDiNA_att5bHPlrg&oe=69C4EC90">
+                <div class="img-overlay">
+                    <div class="add-1">
+                        LaGina "Gina" Mitchell-Scott
+                    </div>
+                </div>
+            </div>
+            <span class="disclaimer">Image obtained through Facebook</span>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>LaGina "Gina" Mitchell-Scott</td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Party</td>
+                        <td>Democrat</td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td><a href="https://laginamitchellscott.com/" target="_blank">laginamitchellscott.com<a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Email</td>
+                        <td><a href="mailto:lagina4cc13@gmail.com">lagina4cc13@gmail.com</a></td>
+                    </tr>
+                    <tr class="bg-gray">
+                        <td>Social Media</td>
+                        <td>
+                            <a href="https://www.facebook.com/people/LaGina-Mitchell-Scott-For-Shelby-County-Commission-District-13/61578374221785/?mibextid=wwXIfr&rdid=4a9eyUYA9VwI1Glf&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F14K3vSDHQsR%2F%3Fmibextid%3DwwXIfr"
+                                target="_blank">Facebook</a>
+                            <a href="https://www.instagram.com/lagina4cc13" target="_blank">Instagram</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        {% endif %}
+    </div>
+</body>
+
+</html>
